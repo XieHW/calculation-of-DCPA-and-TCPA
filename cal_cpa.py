@@ -156,7 +156,7 @@ class Cal():
             tcpa=D*cos(radians(Q+alpha))/vx
 
         if vx<0.000001:
-            tcpa=0#如果两船相对静止，让他们的最近会遇距离为0
+            tcpa=1000000000#如果两船相对静止，让他们的最近会遇距离为无穷大
         #print("dcpa:%s,tcpa:%s"%(fabs(dcpa*60),tcpa*60*60))#dcpa的单位为分，也就是海里，tcpa的单位是分钟（先从度转化成分，再转成分钟）
         return dcpa*60,tcpa*60*60
 
