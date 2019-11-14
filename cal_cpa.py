@@ -146,7 +146,7 @@ class Cal():
         D=self.dist()
 
         if b==0:                              #如果他们相对航向为0
-            dcpa=D/60
+            dcpa=D
             tcpa=0
         elif b<=180:
             dcpa=D*sin(radians(fabs(Q-alpha)))
